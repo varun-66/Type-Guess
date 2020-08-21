@@ -1,0 +1,22 @@
+{
+	"manifest_version":2 ,
+	"name": "TypeGuess",
+	"description" : "A Game where you have to guess a word from your current page given its definition.",
+	"version": "1.0",
+	"icons": { "128": "howl.png" },
+	"permissions": [
+      "storage"
+    ],
+    "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
+	"content_scripts": [
+		{
+		"matches": ["<all_urls>"],
+		"js" : ["content.js"]
+		}
+	],
+	"browser_action": {
+		"default_icon" : "SpiritwolfRED_east.png",
+		"default_popup" : "popup.html",
+		"default_title" : "Play A Game"
+	}
+}
